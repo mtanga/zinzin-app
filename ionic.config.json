@@ -1,0 +1,7 @@
+{
+  "name": "zm",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
