@@ -1,0 +1,28 @@
+<ion-content>
+  <ion-buttons  (click)="dismiss()" float-right padding-top padding-end>
+      <ion-icon slot="icon-only" name="close" color="light"></ion-icon>
+  </ion-buttons>
+
+
+  <div id="outerContainer">
+    <div class="pdf-container">
+      <pdf-viewer
+        [src]="{url: url, withCredentials:false}"
+        [rotation]="0"
+        [original-size]="false"
+        [show-all]="true"
+        [fit-to-page]="false"
+        [zoom]="1"
+        [zoom-scale]="'page-width'"
+        [stick-to-page]="false"
+        [render-text]="true"
+        [external-link-target]="'blank'"
+        [autoresize]="true"
+        [show-borders]="false"
+        style="width: 100%; height: 900px;"
+      ></pdf-viewer>
+    </div>
+  </div>
+  
+
+</ion-content>

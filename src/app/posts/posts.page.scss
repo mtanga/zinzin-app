@@ -1,0 +1,32 @@
+.page-content {
+  --background: var(--ion-color-light);
+
+  .post-card {
+    outline: none;
+
+    .read-more-label {
+      text-align: right;
+    }
+  }
+}
+
+
+
+
+.titre{
+  // color : red;
+  font-size: 18px;
+  text-align: justify;
+  font-weight: 700;
+}
+
+.card-content-md p {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 2px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.5;
+  color: black;
+}

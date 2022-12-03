@@ -1,0 +1,110 @@
+:host {
+  .imagediv {
+    height: 200px;
+    justify-content: center;
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    width: 100%;
+    font-size: 30px;
+    color: white;
+  }
+}
+.list-md,
+.list-ios {
+  margin: 0;
+  padding: 0px 0;
+  padding-bottom: 53px;
+  //  background: var(--ion-tabbar-text-color);
+  //background: var(--ion-item-background,var(--ion-background-color,#fff));
+}
+.video-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+  .imagediv {
+    position: relative;
+    background-repeat: no-repeat;
+    height: 40% 100px;
+    background-size: cover;
+    .inner {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      font-size: 14px;
+      color : #8c2b8a;
+      background: #222;
+      padding: 1px 5px;
+      border-radius: 3px;
+    }
+  }
+  .details {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    background: #8c2b8a;
+    padding: 10px;
+    margin-top: -5px;
+    padding-top: 0px;
+    width: 100%;
+    color:white;
+
+
+    .avatar {
+      img {
+        
+        padding: 10px;
+        min-width: 100px;
+        max-width: 100px;
+         
+      }
+    }
+    .title-block {
+      display: flex;
+      flex-direction: column;
+      padding-top: 14px;
+      font-family: sans-serif;
+      .extra {
+        display: flex;
+        flex-direction: row;
+        font-size: 14px;
+        color: gray;
+        align-items: center;
+      }
+      .dot {
+        height: 3px;
+        width: 3px;
+        background: gray;
+        margin: 0px 6px;
+      }
+    }
+  }
+}
+
+.container {
+  position: relative;
+  font-family: Arial;
+}
+
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: #8c2b8a;
+  color : white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.video-list .details .title-block .extra {
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  color: white;
+  align-items: center;
+}

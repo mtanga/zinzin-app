@@ -1,1 +1,142 @@
 
+.iconDownload{
+    width: 25px;
+    height: 25px;
+}
+
+.iconMenu{
+    width: 20px;
+    height: 20px;
+    color : #8c2b8a;
+    padding-right: 5px;
+}
+
+
+
+.order{
+    z-index: -1;
+}
+
+
+.tab-color {
+    color: white;
+}
+
+.tab-t {
+    background-color: #8c2b8a;
+}
+
+.tab-t:hover {
+    background-color: #f8ef00!important;
+}
+
+.titre{
+    color:#8c2b8a!important;
+}
+
+
+
+.ion-color-primary {
+  --background: transparent;
+  --ion-color-base: transparent !important;
+ }
+
+  .mod{
+  background: #8c2b8a!important;
+ }
+
+
+ ion-tab-bar{
+    background: #8c2b8a;
+ }
+ 
+
+ .sc-ion-buttons-ios-h {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-alibgn: center;
+    align-items: center;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    z-index: 99;
+    color:white;
+}
+
+
+.header-ios ion-toolbar:last-of-type {
+    --border-width: 0px;
+}
+
+
+
+
+ion-menu ion-content {
+    * {
+        font-family: lato;
+    }
+    letter-spacing: 0.5px;
+    --background: white;
+    .main-header {
+        height: 25vh;
+        width: 120%;
+        background: #8c2b8a17;
+        box-shadow: 0 1px 10px var(--ion-color-light);
+        border-radius: 0 0 50% 50%;
+        margin-left: -4.5vh;
+        div {
+            transform: translateY(3vh);
+            ion-avatar {
+                width: 10vh;
+                height: 10vh;
+                background: var(--ion-color-white);
+                margin-bottom: 5px;
+                border: 7px solid var(--ion-color-primary);
+            }
+            ion-label {
+                font-weight: bold;
+                font-size: 1.2rem;
+                p {
+                    margin-top: 3px;
+                    ion-text {
+                        font-size: 0.7rem;
+                    }
+                }
+            }
+        }
+    }
+    .menu-items {
+        padding-left: 20px;
+        ion-item.selected {
+            --background: rgba(var(--ion-color-primary-rgb), 0.14);
+            border-left: 5px solid var(--ion-color-tertiary);
+            ion-label {
+                color: var(--ion-color-tertiary);
+                font-weight: bold;
+            }
+        }
+        ion-item.selected ion-icon {
+            color: white!important;
+        }
+    }
+}
+
+/* ion-menu ion-footer {
+    ion-toolbar {
+        
+    }
+} */
+
+
+#sidenav {
+    ion-item-group[submenu] {
+      overflow: hidden;
+      display: block;
+      height: 0;
+      transition: height .3s linear;
+      padding-left: 5%;
+      &.visible {
+          height: inherit;
+          // this is just sample value, calculate how much space you need for your menu items
+      }
+    }
+  }

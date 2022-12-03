@@ -1,3 +1,41 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay">
+
+
+      <ion-content>
+        <div class="logoDiv">
+          <ion-list class="ion-text-center main-header">
+            <div align="center" >
+              <img style="wwidth: 100%; margin-top: -50px;" src="../../assets/ci.png">
+            </div>
+          </ion-list>
+        </div>
+
+      
+      
+          <ion-list id="sidenav">
+            <div *ngFor="let category of infos">
+              <ion-item class="item" (click)="menuItemHandler(category)" *ngIf="category.name!='Uncategorized'">
+                <ion-label [innerHTML]="category.name">
+                  {{category.name}}
+                </ion-label>
+              </ion-item >
+              <ion-item-group submenu [class.visible]="showSubmenu" *ngIf="category.id==elt">
+                <ion-item class="subitem" *ngFor="let item of subInfos" submenu-item  (click)="categoryGo(item.name, item.id)">
+                  <ion-label [innerHTML]="item.name">
+                    {{item.name}}
+                  </ion-label>
+                </ion-item>
+              </ion-item-group>
+            </div> 
+      
+          </ion-list>
+      </ion-content>
+
+
+
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
 </ion-app>

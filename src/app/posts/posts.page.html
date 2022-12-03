@@ -1,0 +1,42 @@
+<ion-header class="ion-no-border">
+	<ion-toolbar color="primary" class="productHeader">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+      <ion-title class="centered-p">Actualités</ion-title>
+<!--     <ion-buttons slot="end">
+      <ion-button (click)="presentPopover()">
+          <ion-icon name="ellipsis-vertical"></ion-icon>
+      </ion-button>
+  </ion-buttons> -->
+
+	</ion-toolbar>
+</ion-header>
+
+<ion-content class="page-content">
+  <ion-card *ngFor="let post of posts"  class="post-card" >
+    <ion-card-header>
+      <ion-card-title class="titre" [innerHTML]="sanitizer.bypassSecurityTrustHtml(post.title.rendered)"></ion-card-title>
+      <span>{{formatDate(post.date)}}</span><br/>
+      <ion-chip style="color:#8c2b8a;"  *ngFor="let category of findFirstAstronaut(post.categories)" (click)="categoryGo(category.name, category.id)">
+        <ion-label style="font-size:10px;" [innerHTML]="category.name">{{category.name}}</ion-label>
+      </ion-chip>
+    </ion-card-header>
+
+      <img *ngIf="post.featured_media!=false" (click)="zoom(post.featured_url, post.title.rendered)" [src]="post.featured_url"/> 
+    <ion-card-content>
+      <p [innerHTML]="sanitizer.bypassSecurityTrustHtml(post.excerpt.rendered)"></p>
+    </ion-card-content>
+    <ion-item class="ion-activated" detail lines="none" color="primary">
+      <!-- <ion-label *ngIf="!post.modified">{{post.date | date}}</ion-label><ion-label *ngIf="post.modified">{{post.modified | date}}</ion-label> -->
+      <ion-icon (click)="invite(post)" name="arrow-redo-outline"></ion-icon>
+      <ion-label [routerLink]="['/post', post.id]" class="read-more-label">Lire la suite ...</ion-label>
+    </ion-item>
+  </ion-card>
+  <ion-infinite-scroll (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content
+    loadingSpinner="bubbles"
+    loadingText="Chargement de plus d'actualités ...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
